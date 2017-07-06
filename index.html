@@ -1,75 +1,187 @@
-<!doctype html>
-<html lang="pl">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Sit on Chair - warsztaty</title>
-        <meta name="description" content="Nasza strona Sit on Chair">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <div class="wrap-all">
+<!DOCTYPE html>
+<html>
 
-            <header class="page-header">
-                <div class="container">
+<head>
+    <meta charset="utf-8" name="description" content="Web Developer, Junior Frontend Developer, SEO, Copywriting, Webwriting, AIDA.">
+    <title>Sit on Chair - Power Showoff Project</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 
-                      <a href="/" class="page-logo">
-                        Sit <span>on</span> Chair
-                      </a>
+<body>
+<!-- header -->
+    <header id="header">
+        <div class="container header">
+            <a id="logo" href="index.html">SIT <span>ON</span> CHAIR</a>
+            <nav>
+                <ul>
+                    <li class="navButtons"><a href="#contact">kontakt</a></li>
+                    <li class="navButtons"><a href="#products">galeria</a></li>
+                    <li class="navButtons" id="about"><a href="#slider">o firmie<a/>
+                        <!-- pop up list for nav menu-->
+                        <ul id="rollMenu">
+                            <li><a href="#">Aktualności</a></li>
+                            <li><a href="#">Nasz team</a></li>
+                            <li><a href="#">Historia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-                      <nav class="page-nav">
-                          <ul>
-                              <li>
-                                  <a href="">O firmie</a>
-                                  <!-- <div> aby naprawic problem z odstępem między belką nawigacji a rozwijanym menu, który utrudnia przesunięcie z nawigacji na menu - wstaw przezroczystego diva obejmującego -->
-                                      <ul class="page-nav-sublist">
-                                          <li><a href="">Aktualności</a></li>
-                                          <li><a href="">Nasz team</a></li>
-                                          <li><a href="">Historia</a></li>
-                                      </ul>
-                              </li>
-                              <li><a href="">Galeria</a></li>
-                              <li><a href="">Kontakt</a></li>
-                          </ul>
-                      </nav>
+    <!-- chair slider -->
+    <section id="slider">
+        <div class="container">
+            <a id="arrowLeft" class=".goLeft" href="#"><</a>
+            <div id="chairSlider">
+                <img id="slideChair" src="img/black_chair.png" />
+            </div>
+            <div id="textSlider">
+                <h1>SIT <span>ON</span> OUR <span>CHAIR</span></h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis turpis non dui aliquam eleifend. Ut non nisl at est tempus ultricies. Nullam sit amet lacus in erat eleifend malesuada vel nec lacus.
+                </p>
+                <button id="buttonMore"><a href="#slider">Zobacz więcej</a></button>
+            </div>
+            <a id="arrowRight" href="#">></a>
+        </div>
+    </section>
 
-                      <!--slider-->
-                      Sit on our chair
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                      <!--button-->
-                      Zobacz więcej
-
-
+    <!--products-->
+    <section id="products">
+        <div class="container">
+            <div class="productImg first">
+                <img src="img/box1_img.jpg" alt="Chair Clair">
+                <div id="product1Desc">
+                    <p>Chair CLAIR</p>
                 </div>
-              </header>
+            </div>
+            <div class="productImg second">
+                <img src="img/box2_img.jpg" alt="Chair Margarita">
+                <div id="product2Desc">
+                    <p>Chair MARGARITA</p>
+                </div>
+            </div>
+            <div class="productTxt">
+                <div id="textBoxTitle">
+                    <p>Finds all inputs</p>
+                </div>
+                <div id="textBox">
+                    <p>Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the ckeckboxes since no click have been linked</p>
+                    <br>
+                    <br>
+                    <p>Notice there is no change when clicking the ckeckboxes since no click events have been</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-              <section>
-                  <div class="container">
+    <!--offers-->
+    <section class="slider3">
+        <div class="container row">
+            <p class="titleSlider">cennik</p>
+            <div class="separator"></div>
+            <div class="sideContainer row">
+                <div class="side">
+                    <div class="bigCircle"></div>
+                    <div class="smallCircle"></div>
+                    <div class="mainCont">
+                        <p class="mainTitle">Basic Plan</p>
+                        <div class="priceCircleCont">
+                            <div class="priceFirst">85<span class="priceSecond">99</span></div>
+                            <div class="hirePurchasePrice">pln/msc</div>
+                        </div>
+                        <div class="purchase">Zakup towaru + dowóz</div>
+                        <div class="service">Serwis</div>
+                        <div class="button">dołącz</div>
+                    </div>
+                </div>
+            </div>
+            <div class="middleContainer row">
+                <div class="side middleCont">
+                    <div class="bigCircle middleCont"></div>
+                    <div class="smallCircle middleContColor"></div>
+                    <div class="mainCont">
+                        <p class="mainTitle middleContTitle">Standard Plan</p>
+                        <div class="priceCircleCont middleContCircle">
+                            <div class="priceFirst priceFontColor">95<span class="priceSecond priceSecondOffer">99</span></div>
+                            <div class="hirePurchasePrice priceFontColor">pln/msc</div>
+                        </div>
+                        <div class="purchase middleContText">Zakup towaru + dowóz</div>
+                        <div class="service">Serwis</div>
+                        <div class=" warranty middleContText">Gwarancja 5 lat</div>
+                        <div class="button middleButton">dołącz</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sideContainer row">
+                <div class="side">
+                    <div class="bigCircle"></div>
+                    <div class="smallCircle"></div>
+                    <div class="mainCont">
+                        <p class="mainTitle">Advance Plan</p>
+                        <div class="priceCircleCont">
+                            <div class="priceThird">211<span class="priceSecond">00</span></div>
+                            <div class="hirePurchasePrice">pln/msc</div>
+                        </div>
+                        <div class="purchase">Zakup towaru + dowóz</div>
+                        <div class="service">Serwis</div>
+                        <div class=" warranty">Gwarancja 6 lat</div>
+                        <div class="service">Porady projektanta</div>
+                        <div class="buttonRight">dołącz</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                      <div>
-                        Chair Clair
-                      </div>
-
-                      <div>
-                        Chair Margarita
-                      </div>
-
-                      <div>
-                        Finds all inputs
-                        Finds all inputs that are not checked
-                      </div>
-
-                  </div>
-              </section>
-
-              <footer>
-
-              </footer>
+    <!--contact-->
+    <section id="contact">
+        <div class="container">
+            <div class="contactTitle">
+                <p>kontakt</p>
+            </div>
+            <form>
+                <div class="contactForm">
+                    <input id="name" type="text" name="name" placeholder="Imię">
+                    <input id="email" type="email" name="email" required placeholder="Email">
+                    <textarea id="text"  rows="5" placeholder="Wiadomość"></textarea>
+                    <div class="error">
+                    </div>
+                    <div class="success">
+                    </div>
+                </div>
+                <div class="contactSend">
+                    <div class="contactImg">
+                        <img src="img/red_chair.png">
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="transport" required>
+                        <label for="transport">Zgadzam się na przetwarzanie danych osobowych</label>
+                    </div>
+                    <button class="buttonSubmit">
+                        <a href="#contact" type="submit">wyślij</a>
+                    </button>
+                </div>
+            </form>
         </div>
 
-    </body>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container footer">
+            <p>Copyright 2017 | All Rights Reserved. - Sit On Chair</p>
+            <a id="logo" href="#header">SIT <span>ON</span> CHAIR</a>
+            <div class="footerMedia">
+                <a href="http://flickr.com" rel="nofollow" target="_blank"><img src="img/flickr.png"></a>
+                <a href="http://vimeo.com" rel="nofollow" target="_blank"><img src="img/vimeo.png"></a>
+                <a href="http://pinterest.com" rel="nofollow" target="_blank"><img src="img/pinterest.png"></a>
+                <a href="http://twitter.com" rel="nofollow" target="_blank"><img src="img/twitter.png"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>

@@ -1,186 +1,674 @@
-/* ======================================================== */
-/* Helper classes */
-/* ======================================================== */
-.hidden {
-    display: none !important;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* ======================================================== */
-/* Fonts definitions */
-/* ======================================================== */
-
-@font-face {
-    font-family: 'ralewaylight';
-    src: url('..fonts/raleway-light-webfont.eot');
-    src: url('..fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('..fonts/raleway-light-webfont.woff2') format('woff2'),
-         url('..fonts/raleway-light-webfont.woff') format('woff'),
-         url('..fonts/raleway-light-webfont.ttf') format('truetype'),
-         url('..fonts/raleway-light-webfont.svg#ralewaylight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'ralewaybold';
-    src: url('..fonts/raleway-bold-webfont.eot');
-    src: url('..fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('..fonts/raleway-bold-webfont.woff2') format('woff2'),
-         url('..fonts/raleway-bold-webfont.woff') format('woff'),
-         url('..fonts/raleway-bold-webfont.ttf') format('truetype'),
-         url('..fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'ralewayregular';
-    src: url('..fonts/raleway-regular-webfont.eot');
-    src: url('..fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('..fonts/raleway-regular-webfont.woff2') format('woff2'),
-         url('..fonts/raleway-regular-webfont.woff') format('woff'),
-         url('..fonts/raleway-regular-webfont.ttf') format('truetype'),
-         url('..fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-/* ======================================================== */
-/* Global class*/
-/* ======================================================== */
-
-.container {
-    margin: 0 auto;
-    width: 1060px;
-}
-
-/* ======================================================== */
-/* Layout*/
-/* ======================================================== */
 * {
     box-sizing: border-box;
-}
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-    font-family: 'raleywayregular', sans-serif;
-}
-/* main header */
-.page-header {
-  background: #000;
-  height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.page-logo {
-  float: left;
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-regular-webfontRaleway-Regular.eot');
+    src: local('Raleway'), local('Raleway-Regular'), url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-regular-webfont.woff') format('woff'), url('../fonts/raleway-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: black;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+/*header*/
+
+.header {
+    height: 35px;
+}
+
+#logo {
+    float: left;
+    padding-top: 10px;
+    margin-left: 20px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+
+}
+
+span {
+    color: #24ba9f;
+}
+
+.navButtons {
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+#rollMenu {
+    color: white;
+    display: none;
+    line-height: 30px;
+    list-style-type: none;
+    width: 110px;
+    padding: 0;
+    padding-top: 23px;
+    position: absolute;
+    right: 200px;
+    top: 25px;
+}
+
+#rollMenu:before {
+    content: "";
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid black;
+    position: absolute;
+    left: 50px;
+    top: 13px;
+}
+
+#rollMenu li>a, #rollMenu li>a:visited {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+#rollMenu li>a:hover {
+    border-bottom: 3px solid #24ba9f;
+}
+
+#rollMenu li {
+    background-color: black;
+    padding-left: 10px;
+}
+
+#rollMenu li:first-child {
+    padding-top: 10px;
+}
+
+#rollMenu li:last-child {
+    padding-bottom: 8px;
+}
+
+#about:hover #rollMenu {
+    display: block;
+}
+
+.navButtons>a {
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
+    margin: 0 10px;
+    padding-top: 10px;
+}
+
+.navButtons>a:hover {
+    border-bottom: 3px solid #24ba9f;
+}
+
+/*slider*/
+
+#slider {
+    clear: both;
+    height: 500px;
+    background: linear-gradient(180deg, white, #c7c5c7);
+    position: relative;
+    width: 100%;
+}
+
+#chairSlider {
+    position: relative;
+    width: 500px;
+    float: left;
+    top: 100px;
+    left: 150px;
+}
+#chairSlider img {
+    width: 470px;
+    height: 335px;
+}
+
+#arrowLeft, #arrowLeft:visited {
+    text-decoration: none;
+    font-size: 5em;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: #24ba9f;
+    cursor: pointer;
+    z-index:2;
+}
+
+#arrowRight, #arrowRight:visited {
+    text-decoration: none;
+    font-size: 5em;
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    color: #24ba9f;
+    cursor: pointer;
+    z-index:2;
+}
+
+#textSlider {
+    padding-top: 15px;
+    padding-right: 50px;
+    float: right;
+    position: relative;
+    width: 500px;
+    text-align: center;
+    top: 140px;
+    right: 150px;
+}
+
+#textSlider h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+#textSlider p {
+    text-align: center;
+    padding: 0 20px 0 20px;
+}
+
+#buttonMore {
+    margin-top: 30px;
+    line-height: 50px;
+    width: 250px;
+    font-size: 1.1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background: #24ba9f;
+    border-radius: 10px;
+}
+
+#buttonMore a, #buttonMore a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*products*/
+
+#products {
+    height: 350px;
+    position: relative;
+    padding: 25px 40px;
+    margin: 0 auto;
+}
+
+.productImg {
+    margin: 0 10px;
+    width: 350px;
+    height: 250px;
+    float: left;
+    overflow: hidden;
+}
+
+.first img, .second img {
+    width: 100%;
+    height: 100%;
+}
+
+#product1Desc, #product2Desc {
+    clear-after: both;
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0 15px;
+}
+
+#product1Desc p, #product2Desc p {
+    margin-top: 10px;
+    border-bottom: 7px solid #24ba9f;
+    font-weight: 700;
+    display: inline-block;
+}
+
+#product1Desc p {
+    padding-right: 50px;
+}
+
+.productTxt {
+    padding: 20px;
+}
+
+#textBoxTitle {
+    width: 350px;
+    height: 50px;
+}
+
+#textBoxTitle>p {
+    margin-top: 10px;
+    border-bottom: 7px solid #24ba9f;
+    font-weight: 700;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+#textBox p {
+    font-size: 15px;
+    color: darkgrey;
+    line-break: loose;
+}
+
+.productTxt {
+    margin: 0 10px;
+    border: 2px solid rgb(209, 209, 209);
+    width: 350px;
+    height: 280px;
+    float: left;
+}
+
+/*offer*/
+
+.slider3 {
+    height: 705px;
+    background-color: #f1f1f1;
+    padding-top: 43px;
+}
+
+.titleSlider {
+    font-size: 23px;
+    text-transform: uppercase;
+    padding-left: 1.5px;
+    font-weight: 600;
+    color: gray;
+}
+
+.separator {
+    width: 320px;
+    height: 8px;
+    background-color: #24ba9f;
+    margin-top: 6px;
+}
+
+.sideContainer {
+    float: left;
+    width: 352px;
+    margin-top: 24px;
+    height: 500px;
+}
+
+.middleContainer {
+    float: left;
+    width: 352px;
+    margin: 25px 25px;
+    height: 500px;
+}
+
+.side {
+    width: 352px;
+    height: 501px;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    background-color: white;
+    position: relative;
+    margin: 52px 0px;
+}
+
+.smallCircle {
+    width: 27px;
+    height: 27px;
+    background-color: #c2c2c2;
+    position: absolute;
+    top: -22px;
+    left: 150px;
+    border-radius: 50%;
+}
+
+.bigCircle {
+    position: absolute;
+    top: -40px;
+    left: 133px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid darkgray;
+    width: 60px;
+    height: 60px;
+}
+
+.mainCont {
+    width: 350px;
+    padding: 17px 1px;
+    height: 498px;
+}
+
+.mainTitle {
+    font-size: 24px;
+    color: #27c7ab;
+    text-align: center;
+    margin: 9px 11px 0 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.priceCircleCont {
+    width: 129px;
+    height: 129px;
+    background-color: white;
+    border: 2px solid gray;
+    margin: 25px auto;
+    border-radius: 50%;
+}
+
+.priceFirst {
+    margin: 18px 25px;
+    font-size: 50px;
+    font-weight: 800;
+    color: lightgray;
+    text-align: center;
+}
+
+
+
+.priceThird {
+    margin: 25px 11px;
+    font-size: 45px;
+    font-weight: 700;
+    color: #d4d4d4;
+    text-align: center;
+}
+
+.priceSecond {
+    color: #d4d4d4;
+    vertical-align: super;
+    font-size: 18px;
+    position: relative;
+    top: -10px;
+}
+
+.priceSecondOffer {
+  color: #27c7ab;
+}
+
+.hirePurchasePrice {
+    font-size: 16px;
+    text-align: center;
+    color: lightgray;
+    font-weight: 700;
+    margin: -23px 0;
+    text-transform: uppercase;
+}
+
+.purchase {
+    margin-top: 33px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-size: 25px;
+    letter-spacing: 0px;
+    word-spacing: 1.5px;
+    color: gray;
+    background-color: lightgray;
+}
+
+.service {
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-size: 25px;
+    letter-spacing: -1.5px;
+    word-spacing: 3px;
+    color: gray;
+    background-color: whitesmoke;
+}
+
+.warranty {
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-size: 25px;
+    letter-spacing: -1.5px;
+    word-spacing: 3px;
+    color: gray;
+    background-color: lightgray;
+}
+
+.button {
+  margin: 110px 100px;
+  width: 123px;
+  height: 35px;
+  background-color: #27c7ab;
+  font-size: 16px;
   text-transform: uppercase;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 40px;
-  display: inline-block;
-  font-weight: 700;
-  color: #fff;
-
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 10px;
 }
 
-.page-logo span {
-  font-weight: 600;
-  color:rgba(0,200,170,1);
+.buttonRight {
+    margin: 20px 100px;
+    width: 123px;
+    height: 35px;
+    background-color: #27c7ab;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
 }
 
-
-/* Główna nawigacja */
-.page-nav {
-  float: right;
+.middleCont {
+    background-color: #27c7ab;
+    border: none;
+    padding: 1px;
 }
 
-.page-nav ul {
-  text-align: right;
+.middleContColor {
+    background-color: whitesmoke;
 }
 
-.page-nav li {
-  display: inline-block;
-  position: relative;
+.middleContTitle {
+    color: white;
 }
 
-.page-nav li a {
-  display: block;
-  padding: 0 20px;
-  line-height: 40px;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-
+.middleContCircle {
+    background-color: white;
+    margin-top: 26px;
+    border: 2px solid white;
 }
 
-/*submenu*/
-.page-nav-sublist {
-  position: absolute;
-  top: 45px; /*lub cal(100% - 10px);*/
-  left: -20px;
-  background: #000;
-  width: 150px;
-  padding: 10px 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s opacity, 0.5s top;
+.priceFontColor {
+    color: #27c7ab;
 }
 
-.page-nav-sublist::before {
-  content: "";
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-bottom-color:#000;
-  position: absolute;
-  margin-left: -10px;
-  left: 50%;
-  top: -20px;
+.middleButton {
+    margin: 65px auto;
+    background-color: white;
+    color: #27c7ab;
 }
 
-.page-nav-sublist li {
-  text-align: left;
-  display: block;
+.middleContTaxt {
+    background-color: white;
 }
 
-.page-nav-sublist li a {
-  text-transform: none;
-  font-weight: normal;
-  line-height: 32px;
+/*contact section*/
+
+#contact {
+    height: 550px;
+    padding: 30px;
 }
 
-.page-nav li:hover .page-nav-sublist {
-  opacity:1;
-  visibility: visible;
-  top: 55px;
+.contactTitle {
+    margin: 0 30px;
+    height: 35px;
+    width: 320px;
+    border-bottom: 7px solid #24ba9f;
+}
+
+.contactTitle>p {
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 20px;
+    color: grey;
+    text-transform: uppercase;
+}
+
+.contactForm {
+    float: left;
+    position: relative;
+    margin-top: 20px;
+    width: 640px;
+    height: 400px;
+}
+
+form input, form textarea {
+    width: 600px;
+    height: 50px;
+    font-size: 2em;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border: 1px solid #24ba9f;
+}
+
+form textarea {
+    height: 200px;
+}
+
+.contactSend {
+    float: left;
+    margin-left: 35px;
+    position: relative;
+    width: 460px;
+    height: 400px;
+}
+
+.checkbox {
+    margin: 35px 0;
+    position: relative;
+    padding: 0 30px 0 0;
+}
+
+.checkbox input {
+    display: block;
+    opacity: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    cursor: pointer;
+}
+
+.checkbox label {
+    display: block;
+    padding-left: 65px;
+    position: relative;
+    font-size: 24px;
+    color: #cecece;
+    line-height: 120%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.checkbox label::before, .checkbox label::after {
+    border: 1px solid #27c7ab;
+    content: "";
+    display: block;
+    left: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    top: 0;
+}
+
+.checkbox label::after {
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
+    border: 0;
+    display: none;
+}
+
+.checkbox input:checked+label::after {
+    display: block;
+}
+
+.buttonSubmit, .buttonSubmit:visited {
+    text-decoration: none;
+    position: relative;
+    height: 75px;
+    width: 425px;
+    background: #24ba9f;
+    font-size: 2.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buttonSubmit a, .buttonSubmit a:visited {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.error, .success {
+    float: right;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+/*footer*/
+
+footer {
+    height: 80px;
+}
+
+.footer {
+    position: relative;
+    height: 100%;
+}
+
+.footer p {
+    float: left;
+    margin: 30px;
+    font-weight: 700;
+    color: #cecece;
+}
+
+.footer .footerMedia {
+    float: right;
+    width: 15%;
+    padding: 20px 0;
+}
+
+.footer #logo {
+    float: right;
+    color: #cecece;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin: 15px 0 15px 0;
+    padding-right: 50px;
+}
+
+.footer #logo span {
+    font-weight: 700;
+    color: #cecece;
 }
